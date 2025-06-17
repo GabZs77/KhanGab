@@ -246,24 +246,6 @@ function setupMenu() {
 
 /* Main Functions */ 
 function setupMain(){
-function autoVerificar() {
-  const respostaCorreta = document.querySelector('input[name="resposta"][correct]') || document.querySelector('input[type="radio"]:checked');
-  if (respostaCorreta) {
-    respostaCorreta.checked = true;
-    const btnVerificar = document.querySelector('#botaoVerificar');
-    if (btnVerificar) {
-      btnVerificar.click();
-      console.log("Resposta correta auto-selecionada e botão Verificar pressionado.");
-    }
-  }
-}
-
-// Rodar automaticament para PC
-if (!device.mobile) {
-  setInterval(() => {
-    autoVerificar();
-  }, 2000);
-}
     function spoofQuestion() {
         const phrases = [ "🔥 KhanGab made by Brazilians " ];
         const originalFetch = window.fetch;
